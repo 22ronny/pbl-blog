@@ -21,5 +21,10 @@ Table Fishtype:
 |  1 | NON_PREDATOR  |
 |  2 | PREDATOR      |
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 
 <!-- ![alternativtext](\pbl-blog\image\klassen.png) -->
