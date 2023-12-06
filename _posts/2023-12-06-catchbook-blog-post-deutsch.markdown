@@ -9,4 +9,4 @@ Hallo! Mein Name ist Ronald Hrovat und ich habe kürzlich einen 10-monatigen Jav
 ![1](../image/klassen.png)
 ![2](image/klassen.png)
 ![3](/pbl-blog\image\klassen.png)
-![4](pbl-blog\image\klassen.png)
+![4](\pbl-blog\image\klassen.png)
