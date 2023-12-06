@@ -16,6 +16,7 @@ Für die Umsetzung meines Projektes habe ich mich folgende Klassen entschieden:
 ## Datenbank
 
 Table Fishtype:
+
 | id | Right columns |
 | -- |---------------|
 |  1 | NON_PREDATOR  |
