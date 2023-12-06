@@ -17,25 +17,25 @@ Für die Umsetzung meines Projektes habe ich mich folgende Klassen entschieden:
 
 ## Datenbank
 Als Datenbank wird PostgreSQL verwendet.
-Die 
+Angebunden wird mittels VPN (Wireguard)
+
 
 Table Fish_type:            
 
-| id | Right columns |      
+| **id** | **Right columns** |      
 | --- |---------------|      
-|  1 | NON_PREDATOR  |      
-|  2 | PREDATOR      |      
+|  *1* | *NON_PREDATOR*  |      
+|  *2* | *PREDATOR*      |      
                             
                             
-
 Table species:
 
-| fish_type_id | id | name    |
+| **fish_type_id** | **id** | **name**    |
 | ------------ | --- | ------- |
-| 1            | 1  | Karpf   |
-| 1            | 2  | Schleie |
-| 2            | 3  | Hecht   |
-| 2            | 4  | Zander  |
+| *1*            | *1*  | *Karpf*   |
+| *1*            | *2*  | *Schleie* |
+| *2*            | *3*  | *Hecht*   |
+| *2*            | *4*  | *Zander*  |
 
 
 
