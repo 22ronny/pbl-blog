@@ -17,14 +17,16 @@ Für die Umsetzung meines Projektes habe ich mich folgende Klassen entschieden:
 
 ## Datenbank
 
-Table Fish_type:            Table species:
+Table Fish_type:            
 
 | id | Right columns |      | fish_type_id | id | name    |
-| -- |---------------|      | 1            | 1  | Karpf   |
-|  1 | NON_PREDATOR  |      | 1            | 2  | Schleie |
-|  2 | PREDATOR      |      | 2            | 3  | Hecht   |
+| -- |---------------|      | -------------| -- | ------  |
+|  1 | NON_PREDATOR  |      | 1            | 1  | Karpf   |
+|  2 | PREDATOR      |      | 1            | 2  | Schleie |
+                            | 2            | 3  | Hecht   |
                             | 2            | 4  | Zander  |
 
+Table species:
 
 
 
