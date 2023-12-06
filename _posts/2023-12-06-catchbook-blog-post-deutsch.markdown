@@ -17,7 +17,7 @@ Für die Umsetzung meines Projektes habe ich mich folgende Klassen entschieden:
 
 Table Fishtype:
 | id | Right columns |
-| -- |:-------------:|
+| -- |---------------|
 |  1 | NON_PREDATOR  |
 |  2 | PREDATOR      |
 
