@@ -16,8 +16,10 @@ Für die Umsetzung meines Projektes habe ich mich folgende Klassen entschieden:
 
 
 ## Datenbank
-Als Datenbank wird PostgreSQL verwendet.  
-Angebunden wird mittels VPN (Wireguard)
+Verwendet wird PostgreSQL.  
+Die Datenbank befindet sich in einem LXC auf einem Server, verbunden über VPN.
+Der LXC wurde erstellt mit Proxmox. Zu Testzwecken wurde die Datenbank auch in einem Dockercontainer erstellt.
+Dafür habe ich Portainer verwendet.  
 
 
 Table Fish_type:            
@@ -63,7 +65,7 @@ Table catch:
 | ------ | ------ | ------- | ---------- | --- | ------- | ---------- |
 | *null* | *8.3* | *1* | *2022-11-19 15:50:00* | *1* | *1* | *1* |
 | *null* | *6.5* | *2* | *2022-11-19 16:40:00* | *2* | *1* | *1* |
-| *85* | *null* | 3* | *2022-11-19 18:30:00* | *3* | *1* | *3* |
+| *85* | *null* | *3* | *2022-11-19 18:30:00* | *3* | *1* | *3* |
 
 
 <!-- ![alternativtext](\pbl-blog\image\klassen.png) -->
