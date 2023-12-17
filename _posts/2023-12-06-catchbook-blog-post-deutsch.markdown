@@ -3,7 +3,50 @@ layout: post
 title: "Catchbook German"
 ---
 ## Einleitung
-Hallo! Mein Name ist Ronald Hrovat und ich habe kürzlich einen 10-monatigen Java-Programmierkurs bei everyone Codes abgeschlossen. Um unsere neu erworbenen Fähigkeiten in Java und Spring Boot zu üben, hatten wir 6 Wochen Zeit, um an einem kleinen Projekt unserer Wahl zu arbeiten. Als begeisterter Angler beschloss ich, mein Projekt übers Angeln zu erstellen. In dem Projekt werden alle Fänge aufgezeichnet. Die Fischarten, Köder, Ort, Zeit und Datum.
+Als begeisterter Angler beschloss ich, ein Projekt übers Angeln zu erstellen. In dem Projekt werden alle Fänge aufgezeichnet. Die Fischarten, Köder, Ort, Zeit und Datum.
+
+## Datenbank
+#### PostgreSQL
+Die Datenbank wurden in einem LXC erstellt. 
+* mit Docker und Portainer
+* mit Proxmox (Debian Bookworm - Eigener Server)
+
+## Highlights
+
+```java
+    public static Specification<Catch> withFilters(Long fishTypeId, LocalDateTime startDate, LocalDateTime endDate, Long speciesId, Long baitId, Long placeId) {
+        return (root, query, criteriaBuilder) -> {
+            List<Predicate> predicates = new ArrayList<>();
+
+            if (fishTypeId != null) {
+                predicates.add(criteriaBuilder.equal(root.get("species").get("fishType").get("id"), fishTypeId));
+            }
+
+            if (startDate != null) {
+                predicates.add(criteriaBuilder.greaterThanOrEqualTo(root.get("catchTime"), startDate));
+            }
+
+            if (endDate != null) {
+                predicates.add(criteriaBuilder.lessThanOrEqualTo(root.get("catchTime"), endDate));
+            }
+
+            if (speciesId != null) {
+                predicates.add(criteriaBuilder.equal(root.get("species").get("id"), speciesId));
+            }
+
+            if (baitId != null) {
+                predicates.add(criteriaBuilder.equal(root.get("bait").get("id"), baitId));
+            }
+
+            if (placeId != null) {
+                predicates.add(criteriaBuilder.equal(root.get("place").get("id"), placeId));
+            }
+
+            return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
+        };
+    }
+}
+```
 
 
 ## Planung und Projektstruktur!
