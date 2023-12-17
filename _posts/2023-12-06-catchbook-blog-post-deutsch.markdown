@@ -2,6 +2,7 @@
 layout: post
 title: "Catchbook German"
 ---
+![alternativtext](\pbl-blog\image\Banner.jpg)
 ## Einleitung
 Als begeisterter Angler beschloss ich, ein Projekt übers Angeln zu erstellen. In dem Projekt werden alle Fänge aufgezeichnet. Die Fischarten, Köder, Ort, Zeit und Datum.
 
@@ -118,4 +119,3 @@ Table catch:
 Der Benutzer kann seine Liste Köder, Plätze und Fischart selbst erweitern und ändern.
 Sobald man diese individuell angepasst hat kann man seine Fänge eintragen.
 
-<!-- ![alternativtext](\pbl-blog\image\klassen.png) -->
