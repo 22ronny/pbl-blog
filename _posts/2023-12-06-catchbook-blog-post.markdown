@@ -26,13 +26,13 @@ Connection via VPN (Wireguard)
 ## Highlights
 A filter with multiple parameters; if no parameter is chosen, the complete list is returned.
 * **Dynamic Queries:**
-  - Enables the creation of queries based on variable filter criteria. This is particularly useful when applications need to flexibly respond to user requests.
+   Enables the creation of queries based on variable filter criteria. This is particularly useful when applications need to flexibly respond to user requests.
 
 * **Reusability:**
-  - The method can be reused in various parts of the application to create different queries with similar filter logic, without having to write a new method each time.
+   The method can be reused in various parts of the application to create different queries with similar filter logic, without having to write a new method each time.
 
 * **Adaptability:**
-  - Allows users or other parts of the application to dynamically adjust the database query by changing only the relevant filter parameters.
+   Allows users or other parts of the application to dynamically adjust the database query by changing only the relevant filter parameters.
 
 
 Controller:
