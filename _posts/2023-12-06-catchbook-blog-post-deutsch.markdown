@@ -28,9 +28,17 @@ Verbindung über VPN (Wireguard)
 ## Highlights
 Ein Filter mit mehreren Parametern, sollte kein Parameter gewählt werden wird die komplette Liste zurückgegeben.
 
+* **Dynamische Abfragen:**  
+- Ermöglicht das Erstellen von Abfragen, die auf variablen Filterkriterien basieren. Dies ist besonders nützlich, wenn Anwendungen flexibel auf Benutzeranfragen reagieren müssen.
+
+* **Wiederverwendbarkeit:**  
+- Die Methode kann in verschiedenen Teilen der Anwendung wiederverwendet werden, um unterschiedliche Abfragen mit ähnlichen Filterlogiken zu erstellen, ohne dass jedes Mal eine neue Methode geschrieben werden muss.
+
+* **Anpassbarkeit:**  
+- Erlaubt Benutzern oder anderen Teilen der Anwendung, die Datenbankabfrage dynamisch anzupassen, indem sie nur die relevanten Filterparameter ändern.
+
+  
 Controller:
-
-
 ```java
     @RequestMapping("/getCatch")
     List<CatchDto> getCatch(
@@ -43,7 +51,14 @@ Controller:
         return service.getCatch(fishTypeId, startDate, endDate, speciesId, baitId, placeId);
     }
 ```
+
+Service Class:
   
+```java
+    public List<CatchDto> getCatch(Long fishTypeId, LocalDateTime startDate, LocalDateTime endDate, Long speciesId, Long baitId, Long placeId) {
+        return repository.findAll(CatchSpecifications.withFilters(fishTypeId, startDate, endDate, speciesId, baitId, placeId));
+    }
+```
 
 Specification Class:
 
@@ -81,4 +96,3 @@ Specification Class:
     }
 }
 ```
-
